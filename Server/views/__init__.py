@@ -12,7 +12,7 @@ def index():
             return render_template("index.html", user = session["user"], data=loads(file.read()), admin=True)
         return render_template("index.html", user = session["user"], data=loads(file.read()), admin=False)
     
-    return render_template('index.html', user=False, data=loads(file.read()))
+    return render_template('index.html', user=False, data=loads(file.read()), admin=False)
 
 
 @app.route('/login')
